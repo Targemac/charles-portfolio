@@ -114,6 +114,11 @@ section ul {
     /* padding: 0; */
 }
 
+section ul a {
+    color: #576f79;
+    text-decoration-style: dotted;
+}
+
 footer {
     text-align: center;
     padding: 10px;
