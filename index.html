@@ -1,238 +1,320 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Targema Charles | Technical Product Leader</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <img src="assets/images/passport.jpg" alt="Targema Charles" />
-      <h1>Targema Charles</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Targema Charles | Technical Product Leader</title>
 
-      <p>
-        <strong>Founding Engineer / Technical Product Lead</strong><br />
-        I help startups build, launch, and scale products from idea to production
-      </p>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-      <p>Abuja, Nigeria | targemac@gmail.com | +2348101846353</p>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-      <p>
-        <a href="https://github.com/Targemac">GitHub</a> |
-        <a href="https://www.linkedin.com/in/charles-targema">LinkedIn</a>
-      </p>
-    </header>
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --primary:#0f172a;
+      --accent:#25ad80;
+      --accent-light:#25ad80cc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --border:#e2e8f0;
+    }
 
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a <strong>full-stack engineer and product leader</strong> who specializes in
-        turning ideas into scalable, real-world products.
-      </p>
+    *{margin:0;padding:0;box-sizing:border-box}
 
-      <p>
-        With 7+ years of experience, I’ve worked across both engineering and product—
-        leading teams, managing development cycles, and delivering solutions that solve
-        real user problems.
-      </p>
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-      <p>
-        What sets me apart is my ability to bridge the gap between
-        <strong>technology, product strategy, and execution</strong>.
-        I don’t just build software—I ensure we build the right product,
-        for the right users, with real impact.
-      </p>
-    </section>
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+    }
 
-    <!-- VALUE -->
-    <section id="value">
-      <h2>What I Do</h2>
-      <ul>
-        <li>Build scalable full-stack applications from idea to production</li>
-        <li>Lead engineering teams and manage delivery</li>
-        <li>Translate business goals into technical execution</li>
-        <li>Drive products from MVP to growth</li>
-      </ul>
-    </section>
+    header{
+      /* padding:80px 0 60px; */
+      text-align:center;
+      animation:fadeIn 1s ease;
+    }
+    
+    header .header_inner{
+        background: linear-gradient(rgb(223, 223, 223),rgb(250, 250, 250));
+        /* display:inline-block; */
+        /* max-width:600px; */
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /* margin-top: 4rem; */
+    }
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Core Skills</h2>
-      <ul>
-        <li><strong>Frontend:</strong> ReactJS, ViteJS, JavaScript (ES6), HTML5, CSS3</li>
-        <li><strong>Backend:</strong> NodeJS, ExpressJS, GraphQL, REST APIs</li>
-        <li><strong>Database:</strong> MySQL, MongoDB</li>
-        <li><strong>State Management:</strong> Redux Toolkit, React Context</li>
-        <li><strong>Product & Design:</strong> Figma, Agile Methodologies</li>
-        <li><strong>DevOps:</strong> GitHub Actions (CI/CD)</li>
-      </ul>
-    </section>
+    header img{
+        /* display: block; */
+      width:120px;
+      /* height: 120px; */
+      border-radius:50px;
+      margin-bottom:20px;
+      /* border:4px solid var(--accent); */
+    }
 
-    <section id="featured">
-  <h2>Featured Work</h2>
+    h1{font-size:2.5rem;font-weight:800}
+
+    .tagline{margin-top:10px;color:var(--muted)}
+
+    .cta{margin-top:20px}
+
+    .cta a{
+      margin:5px;
+      display:inline-block;
+      text-decoration:none;
+      padding:10px 18px;
+      border-radius:8px;
+      background:var(--accent);
+      color:white;
+      transition:0.3s;
+    }
+
+    .cta a:hover{background:var(--accent-light)}
+
+    section{padding:60px 0}
+
+    section p{
+        line-height: 1.8rem;
+        text-align: justify;
+    }
+
+    h2{
+      margin-bottom:20px;
+      font-size:1.8rem;
+      border-left:4px solid var(--accent);
+      padding-left:10px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      transition:0.3s;
+      animation:fadeUp 0.6s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .icon{color:var(--accent);margin-right:8px}
+
+    .project{margin-bottom:30px}
+
+    .project h3{margin-bottom:10px}
+
+    ul{padding-left:20px;margin-top:10px; line-height: 1.8rem;}
+
+    footer{text-align:center;padding:30px 0;color:var(--muted)}
+
+    /* Animations */
+    @keyframes fadeIn{
+      from{opacity:0}to{opacity:1}
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    /* Mobile */
+    @media(max-width:600px){
+      h1{font-size:2rem}
+      header{padding:60px 0}
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div class="header_inner">
+
+        <img src="assets/images/passport.jpg" alt="Targema Charles" />
+        <h1>Targema Charles</h1>
+        <p class="tagline">
+            Founding Engineer / Technical Product Lead — Building & Scaling Products from Idea to Production
+        </p>
+        
+        <div class="cta">
+            <a href="https://github.com/Targemac"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/charles-targema"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+</header>
+
+<section>
+  <h2>About</h2>
   <p>
-    I design and build scalable, real-world products with strong business and regulatory impact.
-    Below is one of my flagship projects.
+    I’m a <strong>Technical Product Leader and Full-Stack Engineer</strong> with 7+ years of experience building scalable digital products. I operate at the intersection of <strong>engineering, product strategy, and execution</strong>, helping businesses move from idea to production-ready systems.
+  </p>
+  <p>
+    I specialize in designing high-impact systems including fintech platforms, compliance solutions, and API-driven architectures that operate in real-world, high-stakes environments.
   </p>
 </section>
 
-    <!-- PROJECTS (NOW CASE-STUDY STYLE) -->
-    <section id="projects">
-      <h2>Selected Projects</h2>
+<section>
+  <h2>What I Do</h2>
+  <div class="grid">
+    <div class="card"><i class="fa-solid fa-code icon"></i> Full-Stack Development</div>
+    <div class="card"><i class="fa-solid fa-lightbulb icon"></i> Product Strategy</div>
+    <div class="card"><i class="fa-solid fa-users icon"></i> Team Leadership</div>
+    <div class="card"><i class="fa-solid fa-network-wired icon"></i> API & System Design</div>
+  </div>
+</section>
 
-      <div>
-  <h3>
-    <a href="https://einvoice.tsentineltech.com" target="_blank">
-      TED E-Invoicing Platform
-    </a>
-  </h3>
+<section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">ReactJS, JavaScript, HTML5, CSS3</div>
+    <div class="card">NodeJS, ExpressJS, GraphQL, REST APIs</div>
+    <div class="card">MySQL, MongoDB</div>
+    <div class="card">Redux, Context API</div>
+    <div class="card">Figma, UI/UX</div>
+    <div class="card">GitHub Actions, CI/CD</div>
+  </div>
+</section>
 
-  <p><strong>Regulatory E-Invoicing & Tax Compliance Platform</strong></p>
+<section>
+  <h2>Featured Project — TED Platform</h2>
 
-  <p>
-    A full-scale e-invoicing and tax compliance platform designed to help businesses
-    comply with Nigeria’s NRS Merchant Buyer System (MBS). The platform automates
-    invoice validation, secure transmission, and regulatory reporting.
-  </p>
+  <div class="card">
+    <h3><a href="https://einvoice.tsentineltech.com" target="_blank">TED E-Invoicing Platform</a></h3>
 
-  <h4>🚧 Problem</h4>
-  <p>
-    Businesses in Nigeria are required to comply with new e-invoicing regulations,
-    but many lack the infrastructure to generate, validate, and transmit
-    standardized invoices to the NRS.
-  </p>
+    <br>
+    <p><strong>Regulatory E-Invoicing & Tax Compliance Platform</strong></p>
+    <p>
+      A full-scale enterprise platform built to enable businesses comply with Nigeria’s NRS e-invoicing requirements under the Merchant Buyer System (MBS).
+    </p>
 
-  <h4>⚙️ What I Did</h4>
+    <br>
+    <h4>Problem</h4>
+    <p>
+      Businesses lacked infrastructure to generate standardized invoices, validate them, and transmit securely to regulatory systems.
+    </p>
+
+    <br>
+    <h4>What I Built</h4>
+    <ul>
+      <li>Full-stack web platform for invoice generation and compliance</li>
+      <li>API integration system for ERP/accounting software</li>
+      <li>Secure transmission pipelines to regulatory endpoints</li>
+      <li>Invoice validation engine with IRN generation</li>
+      <li>Batch processing via Excel/CSV uploads</li>
+      <li>Job queue system for controlled submissions</li>
+      <li>Wallet and token-based billing system</li>
+      <li>Dashboard for tracking invoice status and activity</li>
+    </ul>
+
+    <br>
+    <h4>Impact</h4>
+    <ul>
+      <li>Enabled SMEs and enterprises achieve compliance</li>
+      <li>Reduced manual tax reporting workload</li>
+      <li>Provided scalable infrastructure for high-volume transactions</li>
+    </ul>
+
+    <br>
+    <p><strong>Tech Stack:</strong> ReactJS, NodeJS, ExpressJS, MySQL</p>
+  </div>
+</section>
+
+<section>
+  <h2>Other Projects</h2>
+
+  <div class="card project">
+    <h3><a href="https://myidvs.com" target="_blank">myIDVS</a></h3>
+    <p>Identity management and verification system.</p>
+  </div>
+
+  <div class="card project">
+    <h3>EFLoc App (INEC)</h3>
+    <p>Geospatial polling unit mapping system using ArcGIS.</p>
+  </div>
+
+  <div class="card project">
+    <h3>CEMS – NOTAP</h3>
+    <p>Client evaluation and automation platform.</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Lead Products & Applications Developer</strong><br>
+      T-One Technologies Ltd (2022 – Present)
+      <ul>
+        <li>Lead product development and engineering teams</li>
+        <li>Delivered scalable systems across multiple projects</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Web Development Instructor</strong><br>
+      Torbita (2021 – 2022)
+      <ul>
+        <li>Trained and mentored developers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
   <ul>
-    <li>Led the design and development of the full-stack platform</li>
-    <li>Built secure APIs for invoice processing and system integration</li>
-    <li>Designed architecture to support both web portal and API-based usage</li>
-    <li>Implemented invoice validation and IRN generation workflows</li>
-    <li>Developed job queue system for controlled invoice submission</li>
-    <li>Collaborated with stakeholders on compliance and product requirements</li>
+    <li>Agile Management – 2025</li>
+    <li>Business Process Management – 2025</li>
+    <li>IT Business Analysis – 2025</li>
+    <li>Product Management – 2025</li>
+    <li>Data Protection Officer – 2024</li>
+    <li>Project Management – 2021</li>
+    <li>CCNA – 2021</li>
   </ul>
+</section>
 
-  <h4>🧠 Key Features</h4>
-  <ul>
-    <li>Automated invoice validation and IRN generation</li>
-    <li>API integration with ERP/accounting systems</li>
-    <li>Batch invoice upload via Excel/CSV</li>
-    <li>Token-based billing and wallet system</li>
-    <li>Real-time invoice status tracking</li>
-    <li>Secure transmission to regulatory systems</li>
-  </ul>
+<section>
+  <h2>Education</h2>
+  <p>B.Eng. Electrical Electronics Engineering – ABUAD</p>
+</section>
 
-  <h4>📈 Impact</h4>
-  <ul>
-    <li>Enabled businesses to achieve NRS compliance efficiently</li>
-    <li>Reduced manual invoicing and reporting overhead</li>
-    <li>Provided scalable infrastructure for high-volume transactions</li>
-  </ul>
+<section>
+  <h2>Contact</h2>
+  <p>Email: targemac@gmail.com</p>
+  <p>Location: Abuja, Nigeria</p>
+</section>
 
-  <p>
-    <strong>Tech Stack:</strong> ReactJS, NodeJS, ExpressJS, MySQL, API Integrations
-  </p>
+<footer>
+  © <span id="year"></span> Targema Charles
+</footer>
+
 </div>
 
-      <div>
-        <h3>
-          <a href="https://myidvs.com" target="_blank">myIDVS</a>
-        </h3>
-        <p><strong>Identity Management Platform</strong></p>
-        <ul>
-          <li>Built and scaled a secure identity verification system</li>
-          <li>Led full-stack development using React, Node.js, and MySQL</li>
-          <li>Designed architecture for performance and scalability</li>
-          <li>Collaborated with stakeholders to align product with business needs</li>
-        </ul>
-      </div>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-      <div>
-        <h3>CEMS – NOTAP</h3>
-        <p><strong>Client Evaluation & Management System</strong></p>
-        <ul>
-          <li>Developed automation platform for client processing workflows</li>
-          <li>Improved operational efficiency through system digitization</li>
-          <li>Built full-stack solution with React and Node.js</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>
-          <a href="https://www.efloc.inecnigeria.org/" target="_blank">
-            EFLoc App – INEC
-          </a>
-        </h3>
-        <p><strong>Polling Unit Mapping System</strong></p>
-        <ul>
-          <li>Developed geospatial application using ArcGIS integration</li>
-          <li>Enabled users to locate polling units بسهولة</li>
-          <li>Built scalable backend and interactive frontend</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE (REWRITTEN FOR IMPACT) -->
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div>
-        <h3>Lead Products & Applications Developer</h3>
-        <p><strong>T-One Technologies Ltd | 2022 – Present</strong></p>
-        <ul>
-          <li>Lead development of scalable web applications across multiple projects</li>
-          <li>Manage and mentor development teams</li>
-          <li>Drive product execution from concept to deployment</li>
-          <li>Collaborate with stakeholders to define product direction</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Web Development Instructor</h3>
-        <p><strong>Torbita Computer Training School | 2021 – 2022</strong></p>
-        <ul>
-          <li>Trained students in full-stack development</li>
-          <li>Mentored aspiring developers into industry readiness</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Agile Management – 2025</li>
-        <li>Business Process Management – 2025</li>
-        <li>IT Business Analysis – 2025</li>
-        <li>Becoming a Product Manager – 2025</li>
-        <li>Certified Data Protection Officer – 2024</li>
-        <li>Project Management – 2021</li>
-        <li>Cisco Certified Network Associate – 2021</li>
-      </ul>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Electrical Electronics Engineering – ABUAD</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Let’s Build Something</h2>
-      <p>
-        I’m open to collaborating with startups, product teams, and founders
-        looking to build or scale impactful digital products.
-      </p>
-      <p>Email: targemac@gmail.com</p>
-    </section>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
